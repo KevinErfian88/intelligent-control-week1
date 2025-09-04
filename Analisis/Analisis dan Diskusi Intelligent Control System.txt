@@ -1,0 +1,29 @@
+Nama  : Kevin Erfian Pratama Putra
+NIM   : 224308086
+Kelas : TKA-7D
+
+ANALISIS DAN DISKUSI 
+"Introduction to Intelligent Control Systems"
+
+Analisis Hasil
+
+1. Apa yang terjadi saat objek berwarna merah muncul di kamera?
+   Ketika objek berwarna merah muncul pada frame, sistem akan mengenali dan menandainya. Pada bagian Mask, objek ditunjukkan dengan piksel putih sedangkan latar belakang dengan piksel hitam. Hasil akhir pada Result menampilkan objek yang telah dipisahkan dari latar belakang dengan warna merah.
+
+2. Bagaimana sistem mendeteksi dan memfilter warna merah?
+   Sistem menggunakan pemrosesan citra melalui OpenCV dengan mengubah ruang warna BGR menjadi HSV menggunakan kode {cv2.cvtColor}. Rentang HSV untuk warna merah ditentukan dengan {lower_red} dan {upper_red} sehingga sistem mampu mendeteksi variasi warna merah sesuai nilai hue, saturation, dan value.
+
+3. Bagaimana metode ini dapat diterapkan dalam Intelligent Control Systems?
+   Metode ini dapat diaplikasikan pada bidang robotika (navigasi dan interaksi lingkungan), sistem keamanan (identifikasi objek melalui kamera pengawas), serta industri (kontrol kualitas produk berbasis warna).
+
+Diskusi
+
+1. Bagaimana AI dapat meningkatkan sistem kontrol berbasis Computer Vision?
+   Integrasi AI meningkatkan kinerja Computer Vision dengan machine learning dan deep learning. Sistem mampu menganalisis data visual secara cepat, akurat, beradaptasi terhadap perubahan lingkungan, serta mengotomatiskan pengambilan keputusan berbasis informasi visual.
+
+2. Apa kelebihan dan kekurangan metode deteksi objek berbasis warna?
+     Kelebihan : Cepat, efisien, cocok untuk aplikasi real-time, serta dapat dipadukan dengan bounding box untuk memberikan informasi lokasi dan ukuran objek.
+     Kekurangan: Rentan terhadap noise, perubahan pencahayaan, serta objek lain yang memiliki warna serupa.
+
+3. Bagaimana cara meningkatkan akurasi sistem deteksi objek?
+   Akurasi dapat ditingkatkan melalui metode tambahan seperti deteksi tepi, deteksi bentuk, atau penggunaan model deep learning (YOLO, Faster R-CNN). Selain itu, pemanfaatan dataset yang lebih besar dan bervariasi juga akan meningkatkan kemampuan sistem dalam mengenali objek pada berbagai kondisi.
